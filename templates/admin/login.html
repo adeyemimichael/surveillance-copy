@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="{% static 'admin_login.css' %}">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Admin Login</h2>
+        <form action="{% url 'admin_login' %}" method="POST">
+            {% csrf_token %}
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        {% for message in messages %}
+        <h4 style="color: red; text-align: center;">{{message}}</h4>
+        {% endfor %}
+    </div>
+</body>
+</html>
