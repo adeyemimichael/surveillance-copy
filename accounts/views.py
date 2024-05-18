@@ -84,7 +84,7 @@ def guest_login(request):
             auth.login(request, user)
             return redirect('guest')
          else:
-            messages.info(request, 'you are not authenticated')
+            messages.info(request, 'you are not authorized')
       else:
          messages.info(request, 'incorrect username or password')
          return redirect('guest_login')

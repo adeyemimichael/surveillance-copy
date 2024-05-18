@@ -1,2 +1,26 @@
-<h1>admin dashboard</h1>
-<a href="{% url 'admin_logout' %}">Logout</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IP Camera Stream</title>
+</head>
+<body>
+    <h1>admin dashboard</h1>
+    <a href="{% url 'admin_logout' %}">Logout</a>
+    <h1>VIDEO LIVE STREAM</h1>
+    <div>
+        <h2>Camera Stream</h2>
+        <img src="{% url 'webcam' %}" width="640" height="480" alt="feeds">
+    </div>
+    <div>
+        <h2>Past Recordings</h2>
+        <ul>
+            {% for recording in recordings %}
+                <li>
+                    <a href="{% url 'play_recording' recording.id %}">{{ recording.timestamp }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
