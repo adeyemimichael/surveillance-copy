@@ -6,9 +6,9 @@ body {
 }
 
 .registration-container {
-    width: 300px;
-    margin: 100px auto;
-    background-color: #fff;
+    width: 364px;
+    margin: auto;
+    background-color: hsl(0, 0%, 100%);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

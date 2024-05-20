@@ -6,12 +6,12 @@ body {
 }
 
 .login-container {
-    width: 300px;
+    width: 450px;
     margin: 100px auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(118, 111, 111, 0.1);
 }
 
 h2 {
@@ -39,7 +39,7 @@ input[type="password"] {
 button {
     width: 100%;
     padding: 10px;
-    background-color: orange;
+    background-color: blue;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -48,5 +48,5 @@ button {
 }
 
 button:hover {
-    background-color: darkorange;
+    background-color: rgb(59, 126, 228);
 }

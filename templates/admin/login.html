@@ -5,7 +5,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
-    <link rel="stylesheet" href="{% static 'admin_login.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    {% comment %} <link rel="stylesheet" href="{% static 'admin_login.css' %}"> {% endcomment %}
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        .login-container {
+            width: 450px;
+            height:400px;
+            margin: 100px auto;
+            background-color: #fff;
+            padding: 45px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(118, 111, 111, 0.1);
+            {% comment %} display:flex;
+            flex-direction:column;
+            justify-content:center; {% endcomment %}
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom:20px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 900;
+             font-style: normal;
+            font-size:30px;
+        }
+        
+        .input-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            padding:4px;
+            font-weight:bold;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            width: 98%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        button {
+            width: 60%;
+            padding: 10px;
+            background-color: blue;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top:12px;
+            margin-left:86px;
+            font-weight:bold;
+        }
+        
+        button:hover {
+            background-color: rgb(50, 126, 228);
+        }
+    </style>
 </head>
 <body>
     <div class="login-container">
