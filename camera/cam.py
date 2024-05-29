@@ -53,4 +53,4 @@ class IpWebCam(object):
         return jpeg.tobytes()
     
     def schedule_stop(self):
-        threading.Timer(120, self.stop_recording).start()
+        threading.Timer(24000, self.stop_recording).start()

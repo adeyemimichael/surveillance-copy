@@ -15,12 +15,12 @@ def admin_login(request):
 
       user = auth.authenticate(username=username, password=password)
       if user is not None:
-         if Admin.objects.filter(user=our_user).exists():
-            auth.login(request, user)
-            return redirect('admin')
-         else:
-            messages.info(request, 'You do not have Admin priviledge')
-            return redirect('admin_login')
+         # if Admin.objects.filter(user=our_user).exists():
+         auth.login(request, user)
+         return redirect('admin')
+         # else:
+         #    messages.info(request, 'You do not have Admin priviledge')
+         #    return redirect('admin_login')
       else:
          messages.info(request, 'incorrect username or password')
          return redirect('admin_login')
